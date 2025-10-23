@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ven Consientete</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Ven Consientete</h1>
+        <p><!-- Escribe aquí la presentación de la empresa --></p>
+    </header>
+
+    <main>
+        <button onclick="location.href='{{ url_for('productos_page') }}'">Productos</button>
+        <button onclick="location.href='{{ url_for('reservas_page') }}'">Reservas</button>
+    </main>
+
+    <footer>
+        <p><!-- Información de contacto aquí --></p>
+    </footer>
+</body>
+</html>
