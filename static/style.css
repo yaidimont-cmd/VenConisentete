@@ -1,27 +1,82 @@
+/* -------------------- General -------------------- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8d7da;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d7da; /* rosa pastel */
     color: #333;
     margin: 0;
     padding: 0;
-}
 
-header, footer {
-    background-color: #f5f5dc;
-    padding: 20px;
+    display: flex;
+    flex-direction: column; /* elementos en columna */
+    justify-content: center; /* centrado vertical */
+    align-items: center; /* centrado horizontal */
+    min-height: 100vh;
     text-align: center;
 }
 
+/* -------------------- Cabecera y Footer -------------------- */
+header, footer {
+    background-color: #f5f5dc; /* beige */
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #b565a7; /* un tono rosa más oscuro para el título */
+}
+
+/* -------------------- Botones -------------------- */
 button {
     background-color: #f5f5dc;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin: 10px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #eecedc;
+    background-color: #eecedc; /* cambio suave al pasar mouse */
+    transform: scale(1.05);
 }
+
+/* -------------------- Formularios -------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 300px;
+    margin: 20px auto;
+    background-color: #fff5f7; /* ligero fondo para destacar el formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* -------------------- Listas de productos -------------------- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+ul li {
+    background-color: #fff5f7;
+    margin: 10px 0;
+    padding: 15px;
+    border-ra
+
