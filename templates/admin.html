@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Reservas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Reservas Privadas</h1>
+
+    {% if not acceso %}
+        <form method="POST">
+            <label>Contraseña:</label>
+            <input type="password" name="password" required>
+            <button type="submit">Acceder</button>
+        </form>
+    {% else %}
+        {% for fecha, lista in reservas.items() %}
+            <h2>{{ fecha }}</h2>
+            <ul>
+                {% for r in lista %}
+                    <li>{{ r["producto"] }} - {{ r["duracion"] }} min - {{ r["nombre"] }} - {{ r["telefono"] }} - {{ r["direccion"] }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
