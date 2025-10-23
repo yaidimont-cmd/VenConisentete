@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Productos</h1>
+    <ul>
+        {% for nombre, duracion in productos.items() %}
+            <li>{{ nombre }} - <!-- Espacio para descripción --> {% if duracion != "Contactar" %}Duración: {{ duracion }} min{% else %}Contactar para información{% endif %}</li>
+        {% endfor %}
+    </ul>
+    <button onclick="location.href='{{ url_for('index') }}'">Volver</button>
+</body>
+</html>
